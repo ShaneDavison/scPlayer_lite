@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cusomt player</title>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+</head>
+<body>
+		
+	
+
+	<style>
+		#pButton{
+			height:60px; 
+			width: 60px;
+			border: none;
+			background-size: 50% 50%;
+			background-position: center;
+		}
+		.play{background: url('../images/play.png') no-repeat;}
+		.pause{background: url('../images/pause.png') no-repeat;}			
+	</style>
+	<button id="pButton" class="play" onclick="playAudio()"> press play</button>
+	<audio id="music" >
+	
+	<source src="sounds/sound.mp3" type="audio/mpeg" />
+	</audio>
+
+	<script type="text/javascript">
+		var music = document.getElementById('music');
+ 
+		function playAudio() {
+			if (music.paused) {
+			music.play();
+			pButton.className = "";
+			pButton.className = "pause";
+			} else { 
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+			}
+		}
+
+	</script>
+
+</body>
+</html>
