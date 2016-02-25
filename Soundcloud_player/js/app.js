@@ -11,4 +11,11 @@ scPlayer.config(['$routeProvider',
         templateUrl: 'partials/trackspage.html',
         controller: 'sclistCtrl'
       })
+      .when('/favourites',{
+      	templateUrl: 'partials/trackspage.html',
+      	controller: 'favouritesCtrl'
+      	})
+      	
+
+
   }]);

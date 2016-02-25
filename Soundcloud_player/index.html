@@ -12,10 +12,47 @@
 
 </head>
 <body>
+	<div class="wrapper">  
+	
+      	Search: <input ng-model="query">
+      <br>
+
+
+	  <ul class = "col-md-2">
+        <li class="nav"><a href='home'>Tracks</a></li>
+        <li class="nav"><a href='#'>Feed</a></li>
+        <li class="nav"><a href='favourites'>Favourites</a></li>
+        <li class="nav"><a href='#'>Playlists</a></li>
+      </ul>
+
+      <br>
 
 	<div class="ng-view"></div>
 
+<div class="navbar navbar-fixed-bottom">
+	<button id="pButton" class="play" onclick="playAudio()"> press play</button>
+	<audio id="music" >
+	
+	<script type="text/javascript">
+		var music = document.getElementById('music');
+ 
+		function playAudio() {
+			if (music.paused) {
+			music.play();
+			pButton.className = "";
+			pButton.className = "pause";
+			} else { 
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+			}
+		}
 
+	</script>
+	<source src="/sounds/sound.mp3" type="audio/mpeg" />
+	</audio>
+</div>
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>

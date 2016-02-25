@@ -1,24 +1,4 @@
-<div class="view-container"></div>
 
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
-      Search: <input ng-model="query">
-      <br>
-      <ul>
-        <li class="nav">Tracks</li>
-        <li class="nav">favourites</li>
-        <li class="nav">Feed</li>
-        <li class="nav">Playlists</li>
-      </ul>
-
-      Sort:
-    <select ng-model="orderProp">
-      <option value="name">Alphabetical</option>
-      <option value="age">Newest</option>
-    </select>
-    </div>
-    <p>{{whatever}}</p>
   <div class="col-md-8">
     <ul >
       <li class="tracks" ng-repeat="track in tracks">
@@ -26,3 +6,4 @@
       </li>
     </ul>
   </div>
+

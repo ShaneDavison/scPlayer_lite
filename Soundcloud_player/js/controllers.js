@@ -9,13 +9,14 @@ SC.initialize({
 });
 
 // initiate auth popup
+/*
 SC.connect().then(function() {
   return SC.get('/me');
 }).then(function(me) {
   alert('Hello, ' + me.username);
 });
 		console.log ("hey!");
-
+*/
 /* 
 		SC.connect()
 			.then(function() {
@@ -38,6 +39,21 @@ SC.connect().then(function() {
 		  		$scope.tracks = tracks;
 		  		$scope.$apply();
 			});
+
+
+
+	scControllers.controller('favouritesCtrl', ['$scope', '$http',
+			function ($scope, $http) {
+	SC.initialize({
+	  client_id: 'f911752b0d31492eca3ea086fbc9e8fd',
+	  redirect_uri: 'http://localhost/'
+	});
+
+	SC.get("/users/4268267/favorites ", { imit: 100 })
+		.then(function(favourites){
+	  		$scope.favourites = favourites;
+	  		$scope.$apply();
+		});
 
 
   }]);;

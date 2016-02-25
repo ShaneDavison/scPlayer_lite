@@ -7,4 +7,17 @@
 .nav{
 	border:1px solid black;
 	text-align: center;
+
 }
+
+
+
+
+body{
+	padding-bottom: 70px;
+}
+
+.navbar{
+	background-color: black;
+}
+
