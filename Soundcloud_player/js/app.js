@@ -4,6 +4,9 @@ var scPlayer = angular.module('scPlayer', [
   'scControllers'
 ]);
 
+
+
+
 scPlayer.config(['$routeProvider',
   	function($routeProvider) {
     $routeProvider
@@ -11,11 +14,15 @@ scPlayer.config(['$routeProvider',
         templateUrl: 'partials/trackspage.html',
         controller: 'sclistCtrl'
       })
-      .when('/favourites',{
-      	templateUrl: 'partials/trackspage.html',
-      	controller: 'favouritesCtrl'
-      	})
-      	
+  	  .when('/favourites', {
+        templateUrl: 'partials/favourites.html',
+        controller: 'favouritesCtrl'
+      })
+	  .when('/playlists', {
+        templateUrl: 'partials/playlists.html',
+        controller: 'playlistCtrl'
+      })
+  
 
 
   }]);
